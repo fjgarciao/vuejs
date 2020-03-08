@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<style>
+		[v-cloak] > * {display: none;}
+		[v-cloak]::before {
+			content: "";
+			display: block;
+			width: 120px;
+			height: 120px;
+			margin-bottom: 10px;
+			background-image: url("https://loading.io/mod/spinner/atom/sample.gif") 
+		}
+	</style>
+	<div id="app" v-cloak>
+		<h1>{{mensaje}}</h1>
+	</div>
+	<button onclick="loadFunction()">Cargar App</button>
+	<script type="text/javascript">
+		function loadFunction() {
+			var myApp = new Vue({
+				el: "#app",
+				data: {
+					mensaje: "Bienvenido al curso"
+				}
+			});
+		};
+	</script>
+</body>
+</html>
