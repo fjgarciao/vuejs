@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Lista de correos</h1>
+				<hr/>
+				<template v-for="it in lista">
+					<div class="card" style="width: 18rem;">
+					  <div class="card-body">
+					    <h5 class="card-title">{{it.titulo}}</h5>
+					    <p class="card-text">{{it.descripcion}}</p>
+					  </div>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var myApp = new Vue({
+			el: "#app",
+			data: {
+				lista: [
+					{
+						titulo: "Correo 1",
+						descripcion: "Descripcion correo 1"
+					},
+					{
+						titulo: "Correo 2",
+						descripcion: "Descripcion correo 2"
+					},
+					{
+						titulo: "Correo 3",
+						descripcion: "Descripcion correo 3"
+					},
+					{
+						titulo: "Correo 4",
+						descripcion: "Descripcion correo 4"
+					},
+				]
+			}
+		});
+	</script>
+</body>
+</html>
